@@ -1,0 +1,15 @@
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 1000000
+Prefetch Warmup Instructions: 10000000
+Simulation Instructions: 54612142
+Number of CPUs: 1
+LLC sets: 2048
+LLC ways: 16
+Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
+
+CPU 0 runs ./gap_spec_traces/471.omnetpp-s1.trace.gz
+TRACE FILE NOT FOUND
+hashed_perceptron-no-no-no-sisb_bo-lru-1core: src/main.cc:662: int main(int, char**): Assertion `0' failed.
+Aborted

@@ -1,17 +1,29 @@
-# Pathfinder
+# 北京工业大学多核体系结构大作业Repo
+__小组成员__: 尚凡胜、李高飞
 
-This github repo contains the code and scipts to generate prefetches using Pathfinder on SPEC and GAP traces, and generate results files that and generate result files that contain IPC numbers, LLC Load ACCESS, and LLC PREFETCH REQUEST, ISSUED to calculate accuracy and coverage numbers.
+# 实验流程
+克隆Pathfinder仓库 
+``` git clone https://github.com/linjiaty/Pathfinder.git ```
+创建conda环境
+```
+cd ChampSim
+conda env create -f environment.yml
+conda activate snn-champ_test
+```
+编译 pathfinder
+```
+./ml_prefetch_sim.py build
+```
 
-## Download datasets:
+准备数据, 数据将下载到ChampSim/gap_spec_traces中
+```
+bash download.sh
+```
 
-run 'download.sh' to download the traces we tested in our paper
+运行
+```
+run_pathfinder_gap_spec.sh
+```
 
-## Create enviroment:
-use this command 'conda env create -f environment.yml' to create enviroment for Pathfinder
-
-## Building:
-run './ml_prefetch_sim.py build' to compile
-
-## Running and Evaluating:
-run 'run_pathfinder_gap_spec.sh' to generate prefetch files in folder 'pathfinder_prefetches_gap_spec' and generate result files in results folder
-
+运行结果位于```ChampSim/results```中，如```ChampSim/results/450.soplex-s0.trace.gz-hashed_perceptron-no-no-no-bo-lru-1core.txt```
+表示不同的benchmark上Baseline、两个对比组、pathfinder的结果，结果包括IPC,预取准确率,预取覆盖率
