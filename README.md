@@ -27,3 +27,16 @@ run_pathfinder_gap_spec.sh
 
 运行结果位于```ChampSim/results```中，如```ChampSim/results/450.soplex-s0.trace.gz-hashed_perceptron-no-no-no-bo-lru-1core.txt```
 表示不同的benchmark上Baseline、两个对比组、pathfinder的结果，结果包括IPC,预取准确率,预取覆盖率
+
+# 将运行的结果绘制为如下的柱状图以方便对比
+IPC加速比
+![IPC加速比](figures/pathfinder_speedup.png)
+
+预取准确率
+![预取准确率](figures/pathfinder_accuracy.png)
+
+预取覆盖率
+![预取覆盖率](figures/pathfinder_coverage.png)
+
+缓存未命中率
+![缓存未命中率](figures/pathfinder_mpki.png)
